@@ -3,7 +3,16 @@ import axios from 'axios';
 
 export default function Customer() {
 
-    const addNewCustomer =()=>{};
+    const addNewCustomer =()=>{
+        axios.post()
+        {
+            firstName,
+            lastName,
+            address, 
+            city, 
+            postalCode
+        }
+    };
 
     return (<>
         <form>
