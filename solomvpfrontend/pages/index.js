@@ -1,10 +1,11 @@
-import Head from 'next/head'
+import Head from 'next/head';
 import { useState, useEffect } from "react";
 //import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import Nav from "../components/Nav"
-import Items from '../components/Items'
-import Customer from '../components/Customer'
+import styles from '../styles/Home.module.css';
+import Nav from "../components/Nav";
+import Items from '../components/Items';
+import Customer from '../components/Customer';
+import axios from 'axios';
 
 
 
@@ -16,10 +17,13 @@ export default function Home() {
   const getAllItems = async () => {
     const res = await axios.get('http://localhost:8080/items').catch(err => console.log(err.res))
     const data = res.data;
-    console.log(data)
+
     setItems(data);
   }
-  useEffect(() => { getAllItems() }, [])
+  useEffect(() => { getAllItems() }, []);
+
+  useEffect(() => { console.log(items) }, [items]);
+
   return (
     <div className={styles.container}>
       <Head>
@@ -32,7 +36,7 @@ export default function Home() {
         <Nav></Nav>
       </main>
       <div>
-        <Items items = {items} ></Items>
+        <Items items={items} ></Items>
         <Customer></Customer>
       </div>
     </div>
