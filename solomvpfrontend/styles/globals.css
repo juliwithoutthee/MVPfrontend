@@ -1,6 +1,6 @@
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
 
 html,
 body {
@@ -18,9 +18,4 @@ a {
 
 * {
   box-sizing: border-box;
-}
-
-img {
-  width: 300px;
-  height: auto;
 }
