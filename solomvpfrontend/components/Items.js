@@ -15,9 +15,9 @@ export default function Items({ items }) {
             </div>
             <div>
                 <img src="./images/CarrotCake.webp" />
-                <h3>{items[1].itemName}</h3>
-            <p>{items[1].description}</p>
-            <p>Price: ${items[1].price}</p>
+                <h3>{items[1]?.itemName}</h3>
+            <p>{items[1]?.description}</p>
+            <p>Price: ${items[1]?.price}</p>
             </div>
             <div>
                 <img src="./images/Brownies.jpeg" />
