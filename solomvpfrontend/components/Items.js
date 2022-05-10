@@ -1,21 +1,31 @@
 import React from 'react'
-import axios from 'axios';
 
-export default function Items() {
 
-    const getAllItems = async () => {
-        const res = await axios.get('http://localhost:8080/api/items');
-        const data = res.data;
-        console.log(data)
-    }
+export default function Items({ items }) {
 
+    console.log(items);
     return (
         <>
-            <img src="./images/Brownies.jpeg" />
-            <img src="./images/CarrotCake.webp" />
-            <img src="./images/ApplePie.jpeg" />
-            <img src="./images/ChocolateChipCookies.jpeg" />
-            <img src="./images/StrawberryShortCake.jpeg" />
+            <div>
+                <img src="./images/ChocolateChipCookies.jpeg" />
+            
+            </div>
+            <div>
+                <img src="./images/CarrotCake.webp" />
+
+            </div>
+            <div>
+                <img src="./images/Brownies.jpeg" />
+
+            </div>
+            <div>
+                <img src="./images/ApplePie.jpeg" />
+
+            </div>
+            <div>
+                <img src="./images/StrawberryShortCake.jpeg" />
+
+            </div>
         </>
     )
 }
